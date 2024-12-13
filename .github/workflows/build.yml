@@ -1,0 +1,40 @@
+name: Build and Release Next.js App
+
+on:
+  push:
+    tags:
+      - 'v*' # 触发于版本号标签，如 v1.0.0
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 安装依赖
+        run: npm ci
+
+      - name: 构建 Next.js 应用（使用 standalone 模式）
+        run: |
+          npm run build
+
+      - name: 压缩发布产物
+        run: |
+          cd dist
+          tar -czvf ../nextjs-csr-release.tar.gz .
+
+      - name: 创建 GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: nextjs-standalone-release.tar.gz
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
