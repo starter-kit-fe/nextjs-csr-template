@@ -5,7 +5,7 @@
     "name": "rirh<i@tigerzh.com>"
   },
   "license": "./LICENSE",
-  "version": "24.1213.1113",
+  "version": "24.1216.1029",
   "private": true,
   "scripts": {
     "dev": "next dev",
