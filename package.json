@@ -5,7 +5,7 @@
     "name": "rirh<i@tigerzh.com>"
   },
   "license": "./LICENSE",
-  "version": "24.1217.1630",
+  "version": "24.1217.1638",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -26,7 +26,8 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.468.0",
-    "next": "15.0.4",
+    "motion": "^11.15.0",
+    "next": "15.1.0",
     "next-themes": "^0.4.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -40,7 +41,7 @@
     "@types/react-dom": "^19",
     "dayjs": "^1.11.13",
     "eslint": "^8",
-    "eslint-config-next": "15.0.4",
+    "eslint-config-next": "15.1.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.7",
