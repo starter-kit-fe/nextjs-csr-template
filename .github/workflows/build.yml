@@ -55,7 +55,6 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/amd64,linux/arm64
           build-args: VERSION=${{ steps.get_version.outputs.VERSION }}
           tags: |
             ghcr.io/${{ github.repository }}:${{ steps.get_version.outputs.VERSION }}
