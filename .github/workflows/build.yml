@@ -22,7 +22,7 @@ jobs:
       - name: 安装依赖
         run: npm ci
 
-      - name: 构建 Next.js 应用（使用 standalone 模式）
+      - name: 构建 Next.js 应用
         run: |
           npm run build
 
