@@ -26,9 +26,9 @@ jobs:
         run: |
           npm run build
 
-          - name: 获取仓库名称
-          id: repo-name
-          run: echo "REPO_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')" >> $GITHUB_OUTPUT
+      - name: 获取仓库名称
+        id: repo-name
+        run: echo "REPO_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')" >> $GITHUB_OUTPUT
             
       - name: 压缩发布产物
         run: |
