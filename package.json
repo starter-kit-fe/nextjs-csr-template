@@ -4,8 +4,16 @@
   "author": {
     "name": "rirh<i@tigerzh.com>"
   },
+  "seo": {
+    "title": "nextjs-csr-template",
+    "description": "React NextJS Template",
+    "keywords": "nextjs, react, template, web development",
+    "author": "rirh",
+    "image": "/pwa-512x512.png",
+    "url": "https://fwnaid.com"
+  },
   "license": "./LICENSE",
-  "version": "25.0630.1614",
+  "version": "25.0718.1435",
   "private": true,
   "scripts": {
     "dev": "next dev",

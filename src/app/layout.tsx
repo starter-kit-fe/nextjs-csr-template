@@ -3,6 +3,7 @@ import './globals.css';
 import Providers from '@/components/providers';
 import pkg from '../../package.json';
 import BuildInfo from '@/components/build-info';
+import Seo from '@/components/seo';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -60,6 +61,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Seo />
         <Providers> {children}</Providers>
         <BuildInfo />
       </body>
