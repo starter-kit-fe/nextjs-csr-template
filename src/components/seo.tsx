@@ -15,7 +15,7 @@ export const generateMetadata = (
   title?: string,
   description?: string,
   image?: string,
-  url?: string
+  url?: string,
 ) => {
   const metaTitle = title
     ? `${title} | ${seoConfig.siteName}`

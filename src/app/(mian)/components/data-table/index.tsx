@@ -1,8 +1,11 @@
 'use client';
+
+import { IApp } from '@/app/(mian)/type';
 import { getCoreRowModel, useReactTable } from '@tanstack/react-table';
+
 import columns from './columns';
-import { IApp } from '@/app/(mian)/_type';
 import DataTable from './data-table';
+
 interface DataTableProps {
   data: IApp.asObject[];
 }

@@ -1,1 +1,1 @@
-export * from '@/app/(mian)/_store';
+export * from '@/app/(mian)/store';

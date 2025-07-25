@@ -1,5 +1,6 @@
-import type { NextConfig } from 'next';
 import dayjs from 'dayjs';
+import type { NextConfig } from 'next';
+
 const nextConfig: NextConfig = {};
 const proxy = async () => {
   return [

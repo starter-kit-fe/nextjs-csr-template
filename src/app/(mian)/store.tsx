@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
+import { createJSONStorage, persist } from 'zustand/middleware';
 
 export const useStore = create(
   persist(
@@ -10,6 +10,6 @@ export const useStore = create(
     {
       name: 'user-storage', // 存储名称
       storage: createJSONStorage(() => localStorage), // 存储介质
-    }
-  )
+    },
+  ),
 );

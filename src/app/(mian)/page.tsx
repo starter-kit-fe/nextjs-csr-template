@@ -1,10 +1,12 @@
 'use client';
-import DataTable from './_components/data-table';
-import pkg from '../../../package.json';
-import { useEffect, useState } from 'react';
-import { IApp } from './_type';
-import Show from '@/components/show';
+
 import Loading from '@/components/loading';
+import Show from '@/components/show';
+import { useEffect, useState } from 'react';
+
+import pkg from '../../../package.json';
+import DataTable from './components/data-table';
+import { IApp } from './type';
 
 const cleanVersion = (version: string) => version.replace(/[\^~]/g, '');
 async function fetchLatestVersions(dependencies: { [key: string]: string }) {
@@ -16,7 +18,7 @@ async function fetchLatestVersions(dependencies: { [key: string]: string }) {
           {
             cache: 'force-cache',
             next: { revalidate: 3600 }, // Revalidate every hour
-          }
+          },
         );
 
         if (!response.ok) {
@@ -42,7 +44,7 @@ async function fetchLatestVersions(dependencies: { [key: string]: string }) {
           isNeedUpdate: false,
         };
       }
-    })
+    }),
   );
 
   return dependencyData;

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, AnimationGeneratorType } from 'motion/react';
+import { AnimationGeneratorType, motion } from 'motion/react';
 import Link from 'next/link';
 
 export default function NotFound() {

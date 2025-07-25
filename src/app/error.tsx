@@ -1,7 +1,8 @@
 'use client';
+
+import { Button } from '@/components/ui/button';
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 
 export default function ErrorPage({
   error,
