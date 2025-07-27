@@ -13,7 +13,7 @@
     "url": "https://h06i.com"
   },
   "license": "./LICENSE",
-  "version": "25.0725.1034",
+  "version": "25.0727.2100",
   "private": true,
   "scripts": {
     "dev": "next dev",
