@@ -4,16 +4,8 @@
   "author": {
     "name": "rirh<i@tigerzh.com>"
   },
-  "seo": {
-    "title": "nextjs-csr-template",
-    "description": "React NextJS Template",
-    "keywords": "nextjs, react, template, web development",
-    "author": "rirh",
-    "image": "/pwa-512x512.png",
-    "url": "https://h06i.com"
-  },
   "license": "./LICENSE",
-  "version": "25.0727.2101",
+  "version": "25.0826.1013",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -21,6 +13,45 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky"
+  },
+  "seo": {
+    "title": "nextjs-crs-template - nextjs 脚手架",
+    "description": "nextjs-crs-template 是一个基于 Next.js 的开发脚手架，旨在提供最佳的开发体验和性能。",
+    "keywords": [
+      "nextjs",
+      "脚手架",
+      "React",
+      "前端",
+      "开发工具"
+    ],
+    "og": {
+      "title": "nextjs-crs-template - nextjs 脚手架",
+      "description": "nextjs-crs-template 是一个基于 Next.js 的开发脚手架，旨在提供最佳的开发体验和性能。",
+      "image": "https://h06i.com/pwa-512x512.png",
+      "url": "https://h06i.com",
+      "type": "website"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "nextjs-crs-template - nextjs 脚手架",
+      "description": "nextjs-crs-template 是一个基于 Next.js 的开发脚手架，旨在提供最佳的开发体验和性能。",
+      "image": "https://h06i.com/pwa-512x512.png"
+    },
+    "jsonLd": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "nextjs-crs-template",
+      "url": "https://h06i.com",
+      "description": "nextjs-crs-template 是一个基于 Next.js 的开发脚手架，旨在提供最佳的开发体验和性能。",
+      "publisher": {
+        "@type": "Organization",
+        "name": "nextjs-crs-template",
+        "logo": {
+          "@type": "ImageObject",
+          "image": "https://h06i.com/pwa-512x512.png"
+        }
+      }
+    }
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,json,css,scss,md}": [

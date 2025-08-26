@@ -1,7 +1,9 @@
 import BuildInfo from '@/components/build-info';
 import Providers from '@/components/providers';
 import Seo from '@/components/seo';
+import { Metadata } from 'next';
 import localFont from 'next/font/local';
+import Script from 'next/script';
 
 import pkg from '../../package.json';
 import './globals.css';
@@ -16,6 +18,26 @@ const geistMono = localFont({
   variable: '--font-geist-mono',
   weight: '100 900',
 });
+export const metadata: Metadata = {
+  title: pkg.seo.title,
+  description: pkg.seo.description,
+  keywords: pkg.seo.keywords,
+  openGraph: {
+    title: pkg.seo.og.title,
+    description: pkg.seo.og.description,
+    url: pkg.seo.og.url,
+    type: pkg.seo.og.type as 'website',
+    images: pkg.seo.og.image,
+  },
+  twitter: {
+    card: pkg.seo.twitter.card as 'summary_large_image',
+    title: pkg.seo.twitter.title,
+    description: pkg.seo.twitter.description,
+    images: pkg.seo.twitter.image,
+  },
+  // 建议与 og.url 同步，利于生成绝对 URL
+  metadataBase: new URL(pkg.seo.og.url),
+};
 
 export default function RootLayout({
   children,
@@ -58,6 +80,15 @@ export default function RootLayout({
         {/* <!--[if lt IE 11]><script>window.location.href='/ie.html';</script><![endif]--> */}
         <title>{pkg.name}</title>
         <meta name="description" content={pkg.description} />
+        {pkg.seo.jsonLd && (
+          <Script
+            id="onefile-jsonld"
+            type="application/ld+json"
+            // 保持纯字符串注入，符合 Google / Next.js 推荐
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(pkg.seo.jsonLd) }}
+            strategy="beforeInteractive"
+          />
+        )}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
